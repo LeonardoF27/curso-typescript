@@ -119,3 +119,63 @@ const [motor, ano] = caracteristicas
 console.log(motor)
 console.log(ano)
 
+// Destrucuring (objeto)
+const item = {
+    nome: 'SSD 480GB',
+    preco: 200,
+    caracteristica: {
+        w: 'Importado'
+    }
+}
+
+const nomeItem = item.nome
+const precoItem = item.preco
+console.log(nomeItem)
+console.log(precoItem)
+
+const { nome: n, preco: p, caracteristica: { w } } = item
+console.log(n)
+console.log(p)
+console.log(w)
+
+const ususarioID: string = 'SuporteCod3r'
+const notificacoes: string = '9'
+// const boasVindas = 'Boas vindas' + usuarioID + 'notificações: ' + notificacoes
+const boasVindas = `
+    boas vindas ${ususarioID},
+    notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}
+`
+
+console.log(boasVindas)
+console.log(`Motor: ${caracteristicas[0]}`)
+
+// Callback
+
+// function esperar3s(callback:  (dado: string) => void) {
+//     setTimeout( () => {
+//         callback('3s depois...')
+//     }, 3000)
+// }
+
+// esperar3s(function(resultado: string) {
+//     console.log(resultado)
+// })
+
+// function esperar3sPromise() {
+//     return new Promise((resolve: any) => {
+//         setTimeout(() => {
+//             resolve('3s depois promise...')
+//         }, 3000)
+//     })
+// }
+
+// esperar3sPromise()
+// .then(dado => console.log(dado))
+
+// fetch('https://swapi.co/api/people/1/')
+//     .then( res => res.json())
+//     .then(personagem => personagem.films)
+//     .then(films => fetch(films[0]))
+//     .then(resFilm => resFilm.json())
+//     .then(filme => console.log(filme.title))
+//     .catch(err => console.log('Catch!!!!' + err))
