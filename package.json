@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "live-server": "^1.2.2"
+    "@types/node": "^24.0.1",
+    "live-server": "^1.2.2",
+    "systemjs": "^0.21.6"
   }
 }
